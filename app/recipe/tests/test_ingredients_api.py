@@ -12,9 +12,9 @@ from recipe.serializers import IngredientSerializer
 
 INGREDIENTS_URL = reverse('recipe:ingredient-list')
 
-print('++++++++++++++++++++++++++++++++++++++++++++')
-print(INGREDIENTS_URL)
-print('++++++++++++++++++++++++++++++++++++++++++++')
+# print('++++++++++++++++++++++++++++++++++++++++++++')
+# print(INGREDIENTS_URL)
+# print('++++++++++++++++++++++++++++++++++++++++++++')
 
 
 class PublicIngredientsApiTests(TestCase):
@@ -100,6 +100,6 @@ class PrivateIngredientsApiTests(TestCase):
         res = self.client.post(INGREDIENTS_URL, payload)
 
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
-        
+
 
         
