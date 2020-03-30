@@ -1,1 +1,4 @@
 Recipe app api
+
+To run server and test use :
+    sudo docker-compose run --rm app sh -c "python manage.py test && flake8"
